@@ -1,0 +1,683 @@
+.frame {
+  background-color: #181818;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.frame .div {
+  background-color: #181818;
+  border: 1px none;
+  height: 1755px;
+  position: relative;
+  width: 1920px;
+}
+
+.frame .java-script {
+  height: 128px;
+  left: 896px;
+  position: absolute;
+  top: 1336px;
+  width: 128px;
+}
+
+.frame .react {
+  height: 128px;
+  left: 720px;
+  position: absolute;
+  top: 1336px;
+  width: 128px;
+}
+
+.frame .python {
+  height: 128px;
+  left: 1072px;
+  position: absolute;
+  top: 1336px;
+  width: 128px;
+}
+
+.frame .HTML {
+  height: 128px;
+  left: 896px;
+  position: absolute;
+  top: 1502px;
+  width: 128px;
+}
+
+.frame .CSS {
+  height: 128px;
+  left: 720px;
+  position: absolute;
+  top: 1502px;
+  width: 128px;
+}
+
+.frame .overlap {
+  height: 55px;
+  left: 262px;
+  position: absolute;
+  top: 62px;
+  width: 270px;
+}
+
+.frame .AUSTIN-BARRETT {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.frame .text-wrapper {
+  font-weight: 800;
+}
+
+.frame .span {
+  font-weight: 200;
+}
+
+.frame .text-wrapper-2 {
+  color: #aa82ff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  left: 70px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 31px;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 1430px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 57px;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 1535px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 57px;
+  white-space: nowrap;
+}
+
+.frame .gitlab {
+  height: 27px;
+  left: 1677px;
+  position: absolute;
+  top: 53px;
+  width: 27px;
+}
+
+.frame .overlap-group {
+  height: 589px;
+  left: 0;
+  position: absolute;
+  top: 678px;
+  width: 1920px;
+}
+
+.frame .rectangle {
+  background-color: #292b30;
+  height: 588px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 1920px;
+}
+
+.frame .img {
+  height: 189px;
+  left: 1065px;
+  object-fit: cover;
+  position: absolute;
+  top: 76px;
+  width: 470px;
+}
+
+.frame .rectangle-2 {
+  background-color: #ededed33;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 13px;
+  height: 189px;
+  left: 1065px;
+  position: absolute;
+  top: 336px;
+  width: 470px;
+}
+
+.frame .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 24px;
+  font-weight: 800;
+  left: 381px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+}
+
+.frame .rectangle-3 {
+  background-color: #484848;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 13px;
+  height: 189px;
+  left: 385px;
+  position: absolute;
+  top: 76px;
+  width: 470px;
+}
+
+.frame .p {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 428px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 139px;
+  width: 406px;
+}
+
+.frame .ellipse {
+  background-color: #fb6060;
+  border: 1px solid;
+  border-color: #671a1a;
+  border-radius: 8px;
+  height: 16px;
+  left: 428px;
+  position: absolute;
+  top: 88px;
+  width: 16px;
+}
+
+.frame .ellipse-2 {
+  background-color: #b7fb60;
+  border: 1px solid;
+  border-color: #405229;
+  border-radius: 8px;
+  height: 16px;
+  left: 472px;
+  position: absolute;
+  top: 88px;
+  width: 16px;
+}
+
+.frame .ellipse-3 {
+  background-color: #fbab60;
+  border: 1px solid;
+  border-color: #93653a;
+  border-radius: 8px;
+  height: 16px;
+  left: 450px;
+  position: absolute;
+  top: 88px;
+  width: 16px;
+}
+
+.frame .tasteful {
+  color: transparent;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 428px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 110px;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-6 {
+  color: #aa82ff;
+  font-style: italic;
+}
+
+.frame .text-wrapper-7 {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.frame .gitlab-2 {
+  height: 27px;
+  left: 815px;
+  position: absolute;
+  top: 85px;
+  width: 27px;
+}
+
+.frame .rectangle-4 {
+  background-color: #77777780;
+  border-radius: 2px;
+  height: 16px;
+  left: 432px;
+  position: absolute;
+  top: 223px;
+  width: 48px;
+}
+
+.frame .rectangle-5 {
+  background-color: #77777780;
+  border-radius: 2px;
+  height: 16px;
+  left: 488px;
+  position: absolute;
+  top: 223px;
+  width: 58px;
+}
+
+.frame .rectangle-6 {
+  background-color: #77777780;
+  border-radius: 2px;
+  height: 16px;
+  left: 554px;
+  position: absolute;
+  top: 223px;
+  width: 60px;
+}
+
+.frame .rectangle-7 {
+  background-color: #77777780;
+  border-radius: 2px;
+  height: 16px;
+  left: 623px;
+  position: absolute;
+  top: 223px;
+  width: 82px;
+}
+
+.frame .text-wrapper-8 {
+  color: #d5c5f9;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 630px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 222px;
+}
+
+.frame .text-wrapper-9 {
+  color: #d5c5f9;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 560px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 222px;
+}
+
+.frame .text-wrapper-10 {
+  color: #d5c5f9;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 495px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 222px;
+}
+
+.frame .text-wrapper-11 {
+  color: #d5c4f8;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 440px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 222px;
+}
+
+.frame .rectangle-8 {
+  background-color: #484848;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 13px;
+  height: 189px;
+  left: 385px;
+  position: absolute;
+  top: 336px;
+  width: 470px;
+}
+
+.frame .ellipse-4 {
+  background-color: #fb6060;
+  border: 1px solid;
+  border-color: #671a1a;
+  border-radius: 8px;
+  height: 16px;
+  left: 428px;
+  position: absolute;
+  top: 348px;
+  width: 16px;
+}
+
+.frame .ellipse-5 {
+  background-color: #b7fb60;
+  border: 1px solid;
+  border-color: #405229;
+  border-radius: 8px;
+  height: 16px;
+  left: 472px;
+  position: absolute;
+  top: 348px;
+  width: 16px;
+}
+
+.frame .ellipse-6 {
+  background-color: #fbab60;
+  border: 1px solid;
+  border-color: #93653a;
+  border-radius: 8px;
+  height: 16px;
+  left: 450px;
+  position: absolute;
+  top: 348px;
+  width: 16px;
+}
+
+.frame .astro {
+  color: #aa82ff;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  left: 428px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 370px;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-12 {
+  color: #ffffff;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 427px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 399px;
+  width: 406px;
+}
+
+.frame .rectangle-9 {
+  background-color: #77777780;
+  border-radius: 2px;
+  height: 16px;
+  left: 428px;
+  position: absolute;
+  top: 496px;
+  width: 48px;
+}
+
+.frame .rectangle-10 {
+  background-color: #77777780;
+  border-radius: 2px;
+  height: 16px;
+  left: 484px;
+  position: absolute;
+  top: 496px;
+  width: 56px;
+}
+
+.frame .rectangle-11 {
+  background-color: #77777780;
+  border-radius: 2px;
+  height: 16px;
+  left: 548px;
+  position: absolute;
+  top: 496px;
+  width: 89px;
+}
+
+.frame .text-wrapper-13 {
+  color: #d5c5f9;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 556px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 495px;
+}
+
+.frame .rectangle-12 {
+  background-color: #77777780;
+  border-radius: 2px;
+  height: 16px;
+  left: 645px;
+  position: absolute;
+  top: 496px;
+  width: 78px;
+}
+
+.frame .text-wrapper-14 {
+  color: #d5c5f9;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 653px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 495px;
+}
+
+.frame .text-wrapper-15 {
+  color: #d5c5f9;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 492px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 495px;
+}
+
+.frame .text-wrapper-16 {
+  color: #d5c4f8;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 436px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-shadow: 0px 4px 4px #00000040;
+  top: 495px;
+}
+
+.frame .gitlab-3 {
+  height: 27px;
+  left: 815px;
+  position: absolute;
+  top: 345px;
+  width: 27px;
+}
+
+.frame .youtube-live {
+  height: 27px;
+  left: 783px;
+  position: absolute;
+  top: 85px;
+  width: 27px;
+}
+
+.frame .overlap-2 {
+  background-color: #1b1924;
+  border: 1px solid;
+  border-color: #38325b;
+  border-radius: 13px;
+  height: 265px;
+  left: 444px;
+  position: absolute;
+  top: 314px;
+  width: 621px;
+}
+
+.frame .text-wrapper-17 {
+  color: #aaaaaa;
+  font-family: "Cascadia Code-Light", Helvetica;
+  font-size: 24px;
+  font-weight: 300;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 137px;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-18 {
+  color: #aaaaaa;
+  font-family: "Cascadia Code-Light", Helvetica;
+  font-size: 24px;
+  font-weight: 300;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 100px;
+  white-space: nowrap;
+}
+
+.frame .text-wrapper-19 {
+  color: #aaaaaa;
+  font-family: "Cascadia Code-Light", Helvetica;
+  font-size: 24px;
+  font-weight: 300;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 63px;
+  white-space: nowrap;
+}
+
+.frame .hey-im-austin-im-a {
+  height: 99px;
+  left: 53px;
+  position: absolute;
+  top: 63px;
+  width: 503px;
+}
+
+.frame .text-wrapper-20 {
+  color: #aaaaaa;
+  font-family: "Inter", Helvetica;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  left: 46px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 201px;
+  width: 492px;
+}
+
+.frame .overlap-3 {
+  height: 15px;
+  left: 26px;
+  position: absolute;
+  top: 9px;
+  width: 223px;
+}
+
+.frame .ghi-src-candidates {
+  color: #aaaaaa;
+  font-family: "Inter", Helvetica;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.frame .more-than {
+  height: 13px;
+  left: 108px;
+  position: absolute;
+  top: 2px;
+  width: 9px;
+}
+
+.frame .more-than-2 {
+  height: 13px;
+  left: 16px;
+  position: absolute;
+  top: 2px;
+  width: 9px;
+}
+
+.frame .more-than-3 {
+  height: 13px;
+  left: 41px;
+  position: absolute;
+  top: 2px;
+  width: 9px;
+}
+
+.frame .react-2 {
+  height: 12px;
+  left: 118px;
+  position: absolute;
+  top: 3px;
+  width: 12px;
+}
+
+.frame .linked-in {
+  height: 27px;
+  left: 1641px;
+  position: absolute;
+  top: 53px;
+  width: 27px;
+}

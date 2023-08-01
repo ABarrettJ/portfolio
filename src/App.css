@@ -1,0 +1,458 @@
+@font-face{
+  font-family: 'Dank Mono Regular';
+  src: local('Dank Mono Regular'),
+  url(./fonts/DankMonoRegular.otf)
+  format('opentype')  ;
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+*{
+    font-family: Inter;
+}
+body{
+  background: #181818;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+}
+
+.name-container{
+  display: flex;
+  margin: 0 0 0 14vw;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.first-name{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+}
+
+.last-name{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  margin-left: 10px;
+}
+
+.title{
+  color: #AA83FF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.social-container{
+  display: flex;
+  gap: 2rem;
+  margin: 0 4vw 0 0;
+}
+
+.resume{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.resume:hover{
+  color: #AA83FF;
+}
+
+.contact{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.contact:hover{
+  color: #AA83FF;
+}
+
+path{
+  cursor: pointer;
+}
+
+/* path:hover{
+  color: #AA83FF;
+  fill: #AA83FF;
+} */
+
+.box {
+  border: 0px none;
+  height: auto;
+  width: auto;
+  overflow-x: hidden;
+}
+
+.box .ghi-src-candidates {
+  color: #aaaaaa;
+  font-family: "Inter-MediumItalic", Helvetica;
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 500;
+  margin-left: 15px;
+  /* left: 25px; */
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  /* top: 9px; */
+  white-space: nowrap;
+}
+
+/* .hello-box{
+  width: 621px;
+  height: 265px;
+  border-radius: 13px;
+  border: 1px solid #38325B;
+  background: #1B1924;
+  margin-left: 25vw;
+} */
+
+.nav-spacer{
+  margin-top: 100px;
+}
+
+.box-inner-content{
+  display: flex;
+  flex-direction: column;
+  counter-reset: line-numbers;
+}
+
+.box-line{
+  display: flex;
+}
+
+.box-line{
+  counter-increment: line-numbers;
+}
+
+.box-line::before {
+  content: counter(line-numbers);
+  margin-right: 5px;
+  color: #AAA;
+  font-family: Cascadia Code;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.box-text{
+  color: #FFF;
+  font-family: Cascadia Code;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.purple{
+  color: #AA83FF;
+  font-family: Cascadia Code;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  2% { width: 100%; }
+}
+
+.box-text span {
+  animation: typing 0.2s steps(1, end) forwards;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 1px solid #AAA; /* cursor */
+}
+
+.ide {
+  font-family: 'Dank Mono Regular', Courier, monospace;
+  color: #dcdcdc;
+  padding: 20px;
+  min-height: 44vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  resize: both;
+  overflow: auto;
+  margin-bottom: 20vh;
+}
+
+.hello-box {
+  width: 621px;
+  height: 265px;
+  border-radius: 13px;
+  border: 1px solid #38325B;
+  background: #1B1924;
+  margin-left: 25vw;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.filestructure {
+  color: #569cd6;
+  margin-bottom: 20px;
+}
+
+.editor {
+  display: flex;
+  height: calc(100% - 20px);
+  width: 100%;
+  overflow: none;
+}
+
+.line-numbers {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+  margin-top: 44px;
+}
+
+.line-number {
+  font-family: 'Dank Mono Regular';
+  color: #848484;
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+
+}
+
+.text-content {
+  color: #FFF;
+  font-family: 'Dank Mono Regular';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 44px;
+}
+
+.highlight {
+  color: #AA83FF;
+  font-family: 'Dank Mono Regular';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.no-style{
+  text-decoration: none;
+}
+
+.dank-mono{
+  font-family: 'Dank Mono Regular';
+  font-style: normal;
+}
+
+
+.projects-container{
+  height: 95vh;
+  background-color: #2A2C31;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-row{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.title-row{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  color: #FFF;
+  margin-left: 0%!important;
+  margin-top: 0%!important;
+}
+
+.project-info{
+  width: 580px;
+  border-radius: 13px;
+  border: 1px solid #000;
+  background: #484848;
+  height: 265px;
+}
+
+.project-display{
+  width: 580px;
+  height: 265px;
+  border-radius: 13px;
+  border: 1px solid #B4B4B4;
+  background: rgba(237, 237, 237, 0.20);
+}
+
+.top-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-dots{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin:10px;
+}
+
+.proj-repo{
+  gap: 5px;
+  display: flex;
+  margin: 10px 10px 0 0;
+  flex-direction: row;
+}
+
+.project-title{
+  color: #AA83FF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.project-title:hover{
+  color: #ccb4ff;
+}
+
+.project-content{
+  display: flex;
+  padding:10px 20px 20px 40px;
+  width: calc(100% - 60px);
+  height: calc(100% - 80px);
+  flex-direction: column;
+}
+
+.project-description{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: calc(100% - 40px);
+}
+
+.skills{
+  display: flex;
+  width: 100%;
+}
+
+.chip{
+  width: auto;
+  padding: 2px 6px 2px 6px;
+  text-align: center;
+  border-radius: 2px;
+  background: rgba(119, 119, 119, 0.50);
+  color: #D5C5F9;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 10px 5px 0px 5px;
+  cursor: pointer;
+}
+
+.chip:hover{
+  background: rgba(143, 143, 143, 0.5);
+}
+
+
+.skills-container{
+  height: 70vh;
+  background-color: #181818;
+  width: 100%;
+}
+
+.projects-title{
+  color: #FFF;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #5e5a5a;
+  border-radius: 26px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #5e5a5a;
+}
+
+.live{
+  padding-top: 6px;
+  padding-right: 6px;
+}
+.pulse-circle {
+  width: 10px;
+  height: 10px;
+  background-color: #ff0000; /* Change the color to your liking */
+  border-radius: 50%; /* Make it a circle */
+  animation: pulse 2s infinite; /* 1s = 1 second; you can adjust this */
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.no-decoration{
+  text-decoration: none;
+}
