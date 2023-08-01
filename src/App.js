@@ -152,7 +152,7 @@ const Resume = () => {
       <div className='resume-image background-image'></div>
       <div id='resume-jump'></div>
       <a className="download-button dl-icon"
-        href="https://raw.githubusercontent.com/ABarrettJ/portfolio/main/src/images/Austin%20Barrett%20Resume%20-%20No%20Phone%20Number.pdf"
+        href="https://raw.githubusercontent.com/ABarrettJ/portfolio/main/src/images/Austin%20Barrett%20Resume.pdf"
         target='_blank'
         rel="noreferrer"
         download="Austin Barrett Resume">
@@ -161,7 +161,7 @@ const Resume = () => {
       <article className='resume-pdf'>
       <iframe
         title="Resume"
-        src="https://drive.google.com/file/d/1HXZ1npuUIJWIVCQP1do5rFp-hMFABQUj/preview"
+        src="https://drive.google.com/file/d/1jjqUpejs8H7VZvrM_3v46-31ExMxcEpu/preview"
         style={{border: "none", width: "100%", height: "110%", overflow: "hidden"}}
       >
       </iframe>
@@ -188,7 +188,7 @@ const Box = () => {
       <div className="group">
         <div className="overlap-group">
           <p className="ghi-src-candidates">
-            src&nbsp;&nbsp;> candidates&nbsp;&nbsp;>&nbsp;&nbsp;<img src={jsx} style={{verticalAlign: 'middle'}}/>&nbsp;<a className='jsx-link' href='https://drive.google.com/file/d/1RdkHBZPQ_WvrMr5j-zakAz13Y3er-waL/view'>austin_barrett.jsx</a>
+            src&nbsp;&nbsp;> candidates&nbsp;&nbsp;>&nbsp;&nbsp;<img src={jsx} style={{verticalAlign: 'middle'}}/>&nbsp;<a className='jsx-link' href='https://drive.google.com/file/d/1jjqUpejs8H7VZvrM_3v46-31ExMxcEpu/view'>austin_barrett.jsx</a>
           </p>
         </div>
       </div>
@@ -250,7 +250,7 @@ function Nav(){
       <div className='title'>Full Stack Developer</div>
     </div>
     <div className='social-container'>
-      <div className='resume'><a className='link-hover' href='https://drive.google.com/file/d/1HXZ1npuUIJWIVCQP1do5rFp-hMFABQUj/view'>Resume</a></div>
+      <div className='resume'><a className='link-hover' href='https://drive.google.com/file/d/1jjqUpejs8H7VZvrM_3v46-31ExMxcEpu/view'>Resume</a></div>
       <div className='contact'><a onClick={scrollToContact} className='link-hover'>Contact</a></div>
       <a href='https://www.linkedin.com/in/abarrettj/' title='My LinkedIn'>
         <LinkedIn/>
