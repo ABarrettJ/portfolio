@@ -235,12 +235,13 @@ path{
 }
 
 .hello-box {
-  width: 621px;
+  width: 30%;
+  min-width: 300px;
   height: 265px;
   border-radius: 13px;
   border: 1px solid #38325B;
   background: #1B1924;
-  margin-left: 25vw;
+  margin-left: 25%;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -715,22 +716,31 @@ path{
 .resume-button{
   text-decoration: none;
   color: #FFF;
-  background: #36393f;
+  background: #595b65;
   padding: 8px 15px 8px 15px;
   border-radius: 4px;
-  margin: 0px 0px 20px 20px;
   max-width: 81px;
   cursor: pointer;
   position: absolute;
-  transform: translate(-50%, -50%);
   left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   animation: float 3s ease-in-out infinite;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  border: 1px solid #000;
+
+}
+
+.fixed-button{
+  position: fixed;
+  opacity: 1; /* New - become visible */
 }
 
 @keyframes float {
-  0% { transform: translate(-50%, -50%) translateY(0); }
-  50% { transform: translate(-50%, -50%) translateY(-20px); }
-  100% { transform: translate(-50%, -50%) translateY(0); }
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-20px); }
+  100% { transform: translateX(-50%) translateY(0); }
 }
 
 .resume-button:hover, .resume-button:hover .expand-icon path {
@@ -762,4 +772,68 @@ path{
 .dl-icon:hover path {
   padding-top: 5px;
   stroke: #AA83FF;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #181818;
+}
+
+.contact-form {
+  font-family: 'Dank Mono Regular';
+  width: 40%;
+  min-width: 300px;
+  max-width: 40%;
+  height: auto;
+  border-radius: 13px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+}
+.form-input-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input, .form-textarea {
+  font-family: 'Dank Mono Regular';
+  width: 48%;
+  min-width: 300px;
+  height: auto;
+  border-radius: 13px;
+  border: 1px solid #38325B;
+  background: #1B1924;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  margin-top: 15px;
+}
+
+.form-textarea {
+  height: 100px;
+  width: 100%;
+  resize: none;
+}
+
+.form-button {
+  font-family: 'Dank Mono Regular';
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+  border-radius: 13px;
+  border: 1px solid #38325B;
+  background: #1B1924;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  margin-top: 15px;
 }

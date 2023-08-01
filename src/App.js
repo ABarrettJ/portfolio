@@ -3,6 +3,7 @@ import tasteful from './images/tf_home.png'
 import astro from './images/astro_home.png'
 import jsx from './images/react.svg'
 import './App.css';
+import './AppMobile.css'
 import './tanuki.css'
 
 // svgs
@@ -146,9 +147,10 @@ const CollapseIcon = (props) => (
 
 const Resume = () => {
   return (
+
     <section className="resume-section">
       <div className='resume-image background-image'></div>
-
+      <div id='resume-jump'></div>
       <a className="download-button dl-icon"
         href="https://raw.githubusercontent.com/ABarrettJ/portfolio/main/src/images/Austin%20Barrett%20Resume%20-%20No%20Phone%20Number.pdf"
         target='_blank'
@@ -178,7 +180,6 @@ function GL2(){
   <path fill="#FC6D26" d="M5.01 11.461a11.43 11.43 0 0 0-4.56-2.05L.416 9.5a6.297 6.297 0 0 0 2.09 7.278l.012.01.03.022 5.16 3.867 4.745-3.584-7.444-5.632Z" class="tanuki-shape left-cheek"></path>
 </svg>
 </span>
-
   );
 }
 const Box = () => {
@@ -580,6 +581,103 @@ function Skills(){
   )
 }
 
+function ContactMe() {
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (event) => {
+    setFormState({
+      ...formState,
+      [event.target.name]: event.target.value
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formState);
+  };
+
+  return (
+    <>
+    <h1 className='projects-title'>Contact Me</h1>
+    <div className='contact-container'>
+      <form className='contact-form' onSubmit={handleSubmit}>
+        <div className='form-input-group'>
+          <input
+            className='form-input'
+            type='text'
+            name='name'
+            placeholder='Your Name'
+            value={formState.name}
+            onChange={handleInputChange}
+          />
+          <input
+            className='form-input'
+            type='email'
+            name='email'
+            placeholder='Your Email'
+            value={formState.email}
+            onChange={handleInputChange}
+          />
+        </div>
+        <textarea
+          className='form-textarea'
+          name='message'
+          placeholder='Your Message'
+          value={formState.message}
+          onChange={handleInputChange}
+        />
+        <button className='form-button' type='submit'>Submit</button>
+      </form>
+    </div>
+    </>
+  );
+}
+
+
+function ResumeElement() {
+  const [openResume, setOpenResume] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleResumeOpen = () => {
+    setOpenResume(!openResume);
+  };
+
+  useEffect(() => {
+    if (openResume) {
+      const element = document.getElementById('resume-jump');
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [openResume]);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <>
+      <div
+        className={`resume-button ${scrollY >= 181 ? 'fixed-button' : ''}`}
+        onClick={handleResumeOpen}
+      >
+        Resume {openResume ? (<CollapseIcon/>) : (<ExpandIcon/>)}
+      </div>
+      {openResume &&
+        <div className='resume-wrapper'>
+          <Resume />
+        </div>
+      }
+    </>
+  )
+}
+
 function App() {
   const[openResume, setOpenResume] = useState(false);
 
@@ -598,17 +696,13 @@ function App() {
     <CodeBox/>
     <Projects/>
     <Skills/>
-    <div className='resume-button' onClick={handleResumeOpen}> Resume {openResume ? (<CollapseIcon/>):(<ExpandIcon/>)}
-    </div>
-    {openResume &&
-      <div className='resume-wrapper'>
-        <Resume/>
-      </div>
-    }
+    <ResumeElement/>
+
+    {/* <ContactMe/> */}
     {/* <div className='resume-wrapper'>
       <Resume/>
     </div> */}
-    <div id='contact'className='contact-me'>s</div>
+    <div id='contact'className='contact-me'></div>
     </>
   );
 }

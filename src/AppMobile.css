@@ -1,0 +1,29 @@
+@media (max-width: 600px) {
+    .hello-box {
+      width: 90%;
+      margin-left: 5%;
+      height: 20%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .name-container {
+      margin: 0;
+      align-items: center;
+      order: 2;
+    }
+
+    .social-container {
+      margin: 0;
+      justify-content: center;
+      order: 1;
+    }
+  }
