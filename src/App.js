@@ -1,73 +1,96 @@
 import React, {useEffect, useState} from 'react';
+import tasteful from './images/tf_home.png'
 import jsx from './images/react.svg'
 import './App.css';
+import './tanuki.css'
 
 const LinkedIn = (props) => (
-  <a href='https://www.linkedin.com/in/abarrettj/'>
   <svg
+    className="icon"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
     width={27}
     height={27}
     fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
-    <path fill="url(#a)" d="M0 0h27v27H0z" />
-    <defs>
-      <pattern
-        id="a"
-        width={1}
-        height={1}
-        patternContentUnits="objectBoundingBox"
-      >
-        <use xlinkHref="#b" transform="scale(.01)" />
-      </pattern>
-      <image
-        xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFWklEQVR4nO2dW6hWRRTHh+JYpvlgEQV2AbsgZTfKDIKkp0LRghNEDxEVVm89hUEPWnF6Syvo8hA9ZNBLkRBBFysiiJ6ii3k4GNYxxQS7ncyvMn8xOcJ8q+/sPXvv2fuMe9bv7cBa66xZf/bM7Nkz3xijKIqiKIqiKIpyAgCMAePAVmAn8DvKjKvFVlebsa7EWAdMaf1LsTVa16YQJwFPlueheBwFJmzt2hBExajPRBvdlFXb5zCwGVgBLDCZAyxwtdjiauNja7c25gAux4zvgcui/IMeAiwHpkXNpqIM9G7GIJ8MFSNMlIGo3bhpipvG+WxuHDQTgKdF7V6JEXRSBL02SrYZAFwnajcZI6h94fFZGCXbDAAWitrNxAg6RJRMM4LY9VNBmqGCJIYKkhhJCQKcDNxmp3tutvYL8DOwA3gRuNH0HFIRBLga+Jpy3gOWmJ5CCoIAN1T8RrIXWGp6yJwLAiwCfqA6X3T2USczQTYIl3+Al9zajh1T5tu1MLcqekTY3mN6RgqCfCZcNhTYbhS275uekYIgB8V3gMUFtktE+AOmZ6QgyAHhcnaB7TnCdr/pGSkI8pFw2Vhg+7Cw/dD0jBQEWS9cjriXwKvc6udpboC348efwvYB0zNSEGTMTWGrskOnvS0pDJwHfFdBjP3AhaaHzPkT4vmdAbw2YreKZDtwrukppCKI538p8BjwLrDHTYvtGtcLwCrTc0hNkNxBBUmLORcEWF1zcXEPcEvsON6+5OuBR4C3XZdpJxJ/A4fcavPHbn3Nfr+Z37hwNesXPaArSF2mY8ZxEwsrwu6K/r8BzwIXdF2/6AEbFPE/YsUBHgJ+ahjD7tLc1OT9SAasG6d2wIQEicmndt2ti/pFDxjLnoZxRmDHjOeBO4FlwFnu+8yZ7u9b3VR8tq5yF3B+YNlq1yMHQXYBdwDzAttrl34edAO9xE4GFoXEqduOvgvyHHBKYFNlvMV29XlEzFcrxslWkIPis/H6wCYWxZwHvD5ClNUVYmQryL3uPIadGd1vIgGcPuIEwFd2/An0z1MQ71jZyON1bnPFqaYGwJXuqfNZE+ibryA+7kPYfcAHbrfkcfYB24DbQwd6F+8NkdK2QD8VBFgFfEs5XwLXBBZ2pfA9HHLYNXtBgDXAXwFi+IW9KVCU3VUH96wFAS4B/ihYn5LHlY8zE7KVFXhZ+G2KXY++CfKOcLObKB61b+OezVLgqRGD9FsB8e8WPm/WbV/vBeHYl0nJXQX29m1csqzkf9glfJ/P67YvB0GeqLrHC/hE+DxeYn+xsP+xbvtyEGR76NNR0AUV7i1231d8DtVtXw6C7BMupduKgIuEz94Se7s67HO0bvtyEGQgXErfyq2N8Bl01b4cBBki9fbVZq4SpqOGqyAqSDP0CRlGuyyHKaGqfVcFrptXcgnTUcNVEBWkGfqEDKNdlsOUUNW+qwLXzSu5hOmo4SqICtIMfUKG0S7LYUqoat9VgevmlVzCdNRwFUQFaYY+IcNol+UwJVS176rAdfNKLmE6anh2glTFRI7TVb6x6lc54a4aSKQ4XeUbq36VEz6RjkWH0Pb/kQ5BScUMaA/t12zkNHBz7Dhd5RurfqbzgJmBCtJ/Qew2fh+90CUQ96PSPr/GCCoPPK5oHDQT+P+pq8k2LgXbEiXbDACeaeNSsFHX5i2PknGPAa5o69q82S6WVFFmAbi8tYslC65eHbh7+mw/mf1Az7HfJF7puqlBa1eveqLo5cSpXE7s/UzeRMDPvipdXN/tCbNWL7gPYip6N1Uy0I+7KfHOEbeB5sgM8I27AG28j7cFKYqiKIqiKIpiesm/hj3GtsFwaC4AAAAASUVORK5CYII="
-        id="b"
-        width={100}
-        height={100}
-      />
-    </defs>
+    <path
+      stroke="#FFF"
+      strokeLinejoin="round"
+      d="M22 3.47v17.06A1.47 1.47 0 0 1 20.53 22H3.47A1.47 1.47 0 0 1 2 20.53V3.47A1.47 1.47 0 0 1 3.47 2h17.06A1.47 1.47 0 0 1 22 3.47ZM7.882 9.648h-2.94v9.412h2.94V9.647Zm.265-3.235a1.694 1.694 0 0 0-1.682-1.706h-.053a1.706 1.706 0 0 0 0 3.412 1.694 1.694 0 0 0 1.735-1.653v-.053Zm10.912 6.93c0-2.83-1.8-3.93-3.588-3.93a3.353 3.353 0 0 0-2.977 1.517h-.082V9.647H9.647v9.412h2.941v-5.006a1.953 1.953 0 0 1 1.765-2.106h.112c.935 0 1.63.588 1.63 2.07v5.042h2.94l.024-5.718Z"
+    />
   </svg>
-  </a>
 )
 const GitLab = (props) => (
   <svg
+    className="icon"
     xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
+    id="Layer_2"
     width={27}
     height={27}
-    fill="none"
+    fill="#FFF"
+    stroke="#FFF"
+    strokeWidth={1.92}
+    data-name="Layer 2"
+    viewBox="0 0 48 48"
     {...props}
   >
-    <path fill="url(#gitlabPattern)" d="M0 0h27v27H0z" />
-    <defs>
-      <pattern
-        id="gitlabPattern"
-        width={1}
-        height={1}
-        patternContentUnits="objectBoundingBox"
-      >
-        <use xlinkHref="#gitlabImage" transform="scale(.01)" />
-      </pattern>
-      <image
-        xlinkHref="data:image/png;base64,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"
-        id="gitlabImage"
-        width={100}
-        height={100}
+    <g id="SVGRepo_iconCarrier">
+      <defs>
+        <style>
+          {
+            ".cls-1{fill:none;stroke:#FFF;stroke-linecap:round;stroke-linejoin:round}"
+          }
+        </style>
+      </defs>
+      <path id="path50" d="M24 42h0l7.18-22.1H16.82L24 42Z" className="cls-1" />
+      <path
+        id="path66"
+        d="M6.76 19.86h0l-2.19 6.71a1.5 1.5 0 0 0 .54 1.67L24 42 6.76 19.86Z"
+        className="cls-1"
       />
-    </defs>
+      <path
+        id="path74"
+        d="M6.76 19.86h10.06L12.49 6.55a.74.74 0 0 0-1.41 0L6.76 19.86Z"
+        className="cls-1"
+      />
+      <path
+        id="path82"
+        d="M41.25 19.86h0l2.18 6.71a1.5 1.5 0 0 1-.54 1.67L24 42l17.25-22.1Z"
+        className="cls-1"
+      />
+      <path
+        id="path86"
+        d="M41.25 19.86H31.18l4.33-13.31a.74.74 0 0 1 1.41 0l4.33 13.31Z"
+        className="cls-1"
+      />
+      <path
+        d="m24 41.96 7.18-22.1h10.07L24 41.96zM24 41.96 6.76 19.86h10.06L24 41.96z"
+        className="cls-1"
+      />
+    </g>
   </svg>
 )
 
+
+function GL2(){
+  return(
+<a href="/" title="Homepage" data-track-action="click_link" data-track-label="gitlab_logo_link" data-track-property="nav_core_menu" class="brand-logo"><span data-testid="brand-header-default-logo"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 24" height="24" width="25" class="tanuki-logo">
+  <path fill="#E24329" d="m24.507 9.5-.034-.09L21.082.562a.896.896 0 0 0-1.694.091l-2.29 7.01H7.825L5.535.653a.898.898 0 0 0-1.694-.09L.451 9.411.416 9.5a6.297 6.297 0 0 0 2.09 7.278l.012.01.03.022 5.16 3.867 2.56 1.935 1.554 1.176a1.051 1.051 0 0 0 1.268 0l1.555-1.176 2.56-1.935 5.197-3.89.014-.01A6.297 6.297 0 0 0 24.507 9.5Z" class="tanuki-shape tanuki"></path>
+  <path fill="#FC6D26" d="m24.507 9.5-.034-.09a11.44 11.44 0 0 0-4.56 2.051l-7.447 5.632 4.742 3.584 5.197-3.89.014-.01A6.297 6.297 0 0 0 24.507 9.5Z" class="tanuki-shape right-cheek"></path>
+  <path fill="#FCA326" d="m7.707 20.677 2.56 1.935 1.555 1.176a1.051 1.051 0 0 0 1.268 0l1.555-1.176 2.56-1.935-4.743-3.584-4.755 3.584Z" class="tanuki-shape chin"></path>
+  <path fill="#FC6D26" d="M5.01 11.461a11.43 11.43 0 0 0-4.56-2.05L.416 9.5a6.297 6.297 0 0 0 2.09 7.278l.012.01.03.022 5.16 3.867 4.745-3.584-7.444-5.632Z" class="tanuki-shape left-cheek"></path>
+</svg>
+</span></a>
+  );
+}
 const Box = () => {
   return (
     <div className="box">
       <div className="group">
         <div className="overlap-group">
           <p className="ghi-src-candidates">
-            src&nbsp;&nbsp;> candidates&nbsp;&nbsp;>&nbsp;&nbsp;<img src={jsx} style={{verticalAlign: 'middle'}}/>&nbsp;austin_barrett.jsx
+            src&nbsp;&nbsp;> candidates&nbsp;&nbsp;>&nbsp;&nbsp;<img src={jsx} style={{verticalAlign: 'middle'}}/>&nbsp;<a className='jsx-link' href='FILL RESUME HERE'>austin_barrett.jsx</a>
           </p>
         </div>
       </div>
@@ -101,11 +124,12 @@ function Nav(){
       <div className='title'>Full Stack Developer</div>
     </div>
     <div className='social-container'>
-      <div className='resume'><a style={{cursor: 'pointer'}}>Resume</a></div>
-      <div className='contact'><a style={{cursor: 'pointer'}}>Contact</a></div>
+      <div className='resume'><a className='link-hover'>Resume</a></div>
+      <div className='contact'><a className='link-hover'>Contact</a></div>
       <LinkedIn/>
+
       <a href='https://gitlab.com/barrettAJ'>
-        <GitLab/>
+        <GL2/>
       </a>
     </div>
     </div>
@@ -134,7 +158,25 @@ const CodeBox = () => {
     }
   }, [index, text]);
 
+  const [showScroll, setShowScroll] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener('scroll', checkScrollTop);
+    return function cleanup() {
+      window.removeEventListener('scroll', checkScrollTop);
+    };
+  });
+
+  const checkScrollTop = () => {
+    if (!showScroll && window.scrollY <= 180){
+      setShowScroll(true);
+    } else if (showScroll && window.scrollY >180){
+      setShowScroll(false);
+    }
+  };
+
   return (
+    <>
     <div className="ide">
       <div className="hello-box">
         {/* <div className="filestructure">
@@ -171,6 +213,14 @@ const CodeBox = () => {
         </div>
       </div>
     </div>
+    {showScroll && (
+        <div className="scroll-downs">
+          <div className="mousey">
+            <div className="scroller">V</div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -203,7 +253,10 @@ function Projects(){
             <div className='proj-repo'>
               <div className="live">
                 <a href='https://tastefulapp.gitlab.io/tasteful/'>
+                <div className="pulse-container">
+                  <div className="center-circle"></div>
                   <div className="pulse-circle"></div>
+                </div>
                 </a>
               </div>
               <a href='https://gitlab.com/tastefulapp/tasteful'>
@@ -237,7 +290,9 @@ function Projects(){
             </div>
           </div>
         </div>
-        <div className='project-display'></div>
+        <div className='project-display-one'>
+          <img src={tasteful} className='display-one-img'/>
+        </div>
       </div>
       <div className='project-row'>
         <div className='project-info'>
@@ -290,7 +345,8 @@ function Projects(){
             </div>
           </div>
         </div>
-        <div className='project-display'></div>
+        <div className='project-display-two'>
+        </div>
       </div>
       <div className='title-row'>
       <h1>Skills</h1>

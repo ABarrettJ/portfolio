@@ -72,8 +72,9 @@ body{
   line-height: normal;
 }
 
-.resume:hover{
+.link-hover:hover{
   color: #AA83FF;
+  cursor: pointer;
 }
 
 .contact{
@@ -85,12 +86,13 @@ body{
   line-height: normal;
 }
 
-.contact:hover{
-  color: #AA83FF;
-}
-
 path{
   cursor: pointer;
+}
+
+.icon:hover path {
+  stroke: #AA83FF;
+  fill: #AA83FF;
 }
 
 /* path:hover{
@@ -120,6 +122,14 @@ path{
   white-space: nowrap;
 }
 
+.jsx-link{
+  color: #aaaaaa;
+  text-decoration: none;
+}
+
+.jsx-link:hover{
+  color: #29a2e9;
+}
 /* .hello-box{
   width: 621px;
   height: 265px;
@@ -198,7 +208,8 @@ path{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  resize: both;
+  /* resize: both; */
+  resize: none;
   overflow: auto;
   margin-bottom: 20vh;
 }
@@ -309,7 +320,23 @@ path{
   height: 265px;
 }
 
-.project-display{
+.project-display-one{
+  width: 580px;
+  height: 265px;
+  border-radius: 13px;
+  border: 1px solid #B4B4B4;
+  /* background: url(./images/tf_home.png), lightgray 50% / cover no-repeat; */
+  background: rgba(237, 237, 237, 0.20);
+}
+
+.display-one-img{
+  border-radius: 13px;
+  width: 580px;
+  height: 265px;
+  object-fit: cover;
+}
+
+.project-display-two{
   width: 580px;
   height: 265px;
   border-radius: 13px;
@@ -429,13 +456,42 @@ path{
   padding-top: 6px;
   padding-right: 6px;
 }
-.pulse-circle {
+.pulse-container {
+  position: relative;
   width: 10px;
   height: 10px;
-  background-color: #ff0000; /* Change the color to your liking */
-  border-radius: 50%; /* Make it a circle */
-  animation: pulse 2s infinite; /* 1s = 1 second; you can adjust this */
-  cursor: pointer;
+}
+
+.center-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff0000;
+  border-radius: 50%;
+}
+
+.pulse-circle::before,
+.pulse-circle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 10px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  transform: scale(1);
+  opacity: 0;
+}
+
+.pulse-circle::before {
+  animation: pulse 1.7s infinite 1s;
+}
+
+.pulse-circle::after {
+  animation: pulse 1.7s infinite 1.2s;
 }
 
 @keyframes pulse {
@@ -444,15 +500,37 @@ path{
     opacity: 1;
   }
   50% {
-    transform: scale(1.2);
-    opacity: 0.5;
+    transform: scale(2.5);
+    opacity: 0;
   }
   100% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 0;
   }
 }
-
 .no-decoration{
   text-decoration: none;
+}
+
+.scroller{
+  color: #FFF;
+}
+.scroll-downs {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 3rem;
+}
+
+.mousey {
+  opacity: 0.75;
+  animation: bob 2s infinite;
+}
+
+@keyframes bob {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
 }
