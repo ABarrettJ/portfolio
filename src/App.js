@@ -5,6 +5,18 @@ import jsx from './images/react.svg'
 import './App.css';
 import './tanuki.css'
 
+// svgs
+import ReactIcon from './images/skill_icons/react.svg';
+import FastAPIIcon from './images/skill_icons/fastapi.svg';
+import JavaScriptIcon from './images/skill_icons/javascript.svg';
+import PythonIcon from './images/skill_icons/python.svg';
+import AWSIcon from './images/skill_icons/amazons3.svg';
+import DjangoIcon from './images/skill_icons/django.svg';
+import PostgreSQLIcon from './images/skill_icons/postgresql.svg';
+import HTML5Icon from './images/skill_icons/html5.svg';
+import CSSIcon from './images/skill_icons/css3.svg';
+import MaterialUIIcon from './images/skill_icons/mui.svg';
+
 const LinkedIn = (props) => (
   <svg
     className="icon"
@@ -21,7 +33,7 @@ const LinkedIn = (props) => (
       d="M22 3.47v17.06A1.47 1.47 0 0 1 20.53 22H3.47A1.47 1.47 0 0 1 2 20.53V3.47A1.47 1.47 0 0 1 3.47 2h17.06A1.47 1.47 0 0 1 22 3.47ZM7.882 9.648h-2.94v9.412h2.94V9.647Zm.265-3.235a1.694 1.694 0 0 0-1.682-1.706h-.053a1.706 1.706 0 0 0 0 3.412 1.694 1.694 0 0 0 1.735-1.653v-.053Zm10.912 6.93c0-2.83-1.8-3.93-3.588-3.93a3.353 3.353 0 0 0-2.977 1.517h-.082V9.647H9.647v9.412h2.941v-5.006a1.953 1.953 0 0 1 1.765-2.106h.112c.935 0 1.63.588 1.63 2.07v5.042h2.94l.024-5.718Z"
     />
   </svg>
-)
+);
 const GitLab = (props) => (
   <svg
     className="icon"
@@ -71,7 +83,90 @@ const GitLab = (props) => (
       />
     </g>
   </svg>
+);
+const Download = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    viewBox="0 0 24 24"
+    className='dl-icon'
+    {...props}
+  >
+    <path
+
+      stroke="#FFF"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M17 17h.01m.39-3h.6c.932 0 1.398 0 1.765.152a2 2 0 0 1 1.083 1.083C21 15.602 21 16.068 21 17c0 .932 0 1.398-.152 1.765a2 2 0 0 1-1.083 1.083C19.398 20 18.932 20 18 20H6c-.932 0-1.398 0-1.765-.152a2 2 0 0 1-1.083-1.083C3 18.398 3 17.932 3 17c0-.932 0-1.398.152-1.765a2 2 0 0 1 1.083-1.083C4.602 14 5.068 14 6 14h.6m5.4 1V4m0 11-3-3m3 3 3-3"
+    />
+  </svg>
+);
+
+const ExpandIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={16}
+    height={16}
+    fill="none"
+    stroke="#FFF"
+    viewBox="0 0 20 20"
+    className='expand-icon'
+    {...props}
+  >
+    <path
+
+      stroke="#FFF"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M10 19H5v-5m9-9h5v5"
+    />
+  </svg>
+);
+
+const CollapseIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={16}
+    height={16}
+    fill="none"
+    stroke="#FFF"
+    viewBox="0 -5 40 48"
+    className='expand-icon'
+    {...props}
+  >
+    <g strokeLinecap="round" strokeLinejoin="round" strokeWidth={4}>
+      <path d="M44 20H28V4M4 28h16v16" />
+    </g>
+  </svg>
 )
+
+const Resume = () => {
+  return (
+    <section className="resume-section">
+      <div className='resume-image background-image'></div>
+
+      <a className="download-button dl-icon"
+        href="https://raw.githubusercontent.com/ABarrettJ/portfolio/main/src/images/Austin%20Barrett%20Resume%20-%20No%20Phone%20Number.pdf"
+        target='_blank'
+        rel="noreferrer"
+        download="Austin Barrett Resume">
+        Download <Download/>
+      </a>
+      <article className='resume-pdf'>
+      <iframe
+        title="Resume"
+        src="https://drive.google.com/file/d/1HXZ1npuUIJWIVCQP1do5rFp-hMFABQUj/preview"
+        style={{border: "none", width: "100%", height: "110%", overflow: "hidden"}}
+      >
+      </iframe>
+      </article>
+    </section>
+  )
+};
 
 
 function GL2(){
@@ -142,6 +237,10 @@ const Dots = (props) => (
 )
 
 function Nav(){
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    element.scrollIntoView({behavior: "smooth"});
+  }
   return (
     <>
     <div className='nav'>
@@ -150,8 +249,8 @@ function Nav(){
       <div className='title'>Full Stack Developer</div>
     </div>
     <div className='social-container'>
-      <div className='resume'><a className='link-hover' href='https://drive.google.com/file/d/1RdkHBZPQ_WvrMr5j-zakAz13Y3er-waL/view'>Resume</a></div>
-      <div className='contact'><a className='link-hover'>Contact</a></div>
+      <div className='resume'><a className='link-hover' href='https://drive.google.com/file/d/1HXZ1npuUIJWIVCQP1do5rFp-hMFABQUj/view'>Resume</a></div>
+      <div className='contact'><a onClick={scrollToContact} className='link-hover'>Contact</a></div>
       <a href='https://www.linkedin.com/in/abarrettj/' title='My LinkedIn'>
         <LinkedIn/>
       </a>
@@ -165,11 +264,17 @@ function Nav(){
 }
 
 const CodeBox = () => {
+
   const [index, setIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const lineHeight = 60;
   const containerHeight = 256;
   const numLines = Math.floor(containerHeight / lineHeight);
+
+  const scrollToProjects = () => {
+    const element = document.getElementById('projects-scroll');
+    element.scrollIntoView({behavior: "smooth"});
+  }
 
   const text = "Hey, I’m Austin! I’m a full stack developer located in Charlotte, NC...";
 
@@ -242,7 +347,7 @@ const CodeBox = () => {
     {showScroll && (
         <div className="scroll-downs">
           <div className="mousey">
-            <div className="scroller">V</div>
+            <div className="scroller" onClick={scrollToProjects}>V</div>
           </div>
         </div>
       )}
@@ -254,7 +359,7 @@ const CodeBox = () => {
 function Projects(){
   return(
     <>
-    <h1 className='projects-title'>Projects</h1>
+    <h1 id='projects-scroll' className='projects-title'>Projects</h1>
     <div className='projects-container'>
       <div className='project-row'>
         <div className='project-info'>
@@ -347,7 +452,7 @@ function Projects(){
             </div>
             <div class="flex w-full mr-4 bg-gray-800 rounded-full justify-evenly lg:px-4 laptop:px-0 xs:justify-center xs:w-5/5">
 
-              <a href="https://github.com/rfp2207boyz2men/frontendcapstone" target="_blank" class="browser-link"> https://tastefulapp.gitlab.io/tasteful/ </a>
+              <a href="https://tastefulapp.gitlab.io/tasteful/" target="_blank" class="browser-link"> https://tastefulapp.gitlab.io/tasteful/ </a>
               <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500 top-[1px] mt-[3px] text-center duration-300 ease-in-out hover:text-gray-400 phone:hidden xs:hidden xs:text-xs" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                 {/* <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon> */}
               </svg>
@@ -441,7 +546,7 @@ function Projects(){
               </svg>
             </div>
             <div class="flex w-full mr-4 bg-gray-800 rounded-full justify-evenly lg:px-4 laptop:px-0 xs:justify-center xs:w-5/5">
-              <a href="https://github.com/rfp2207boyz2men/frontendcapstone" target="_blank" class="browser-link"> https://gitlab.com/barrettAJ/astro/ </a>
+              <a href="https://gitlab.com/barrettAJ/astro/" target="_blank" class="browser-link"> https://gitlab.com/barrettAJ/astro/ </a>
               <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-gray-500 top-[1px] mt-[3px] text-center duration-300 ease-in-out hover:text-gray-400 phone:hidden xs:hidden xs:text-xs" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
               </svg>
             </div>
@@ -451,7 +556,7 @@ function Projects(){
         </div>
       </div>
       <div className='title-row'>
-      <h1>Skills</h1>
+      <h1 className='skills-title'>Skills</h1>
       </div>
     </div>
     </>
@@ -459,10 +564,33 @@ function Projects(){
 }
 
 function Skills(){
-  return(<div className='skills-container'></div>)
+  return(
+  <div className='skills-container'>
+    <div className='skills-tile'> <img className="skill-icon" src={ReactIcon} alt="React Icon"/><div className="skill-name">React</div></div>
+    <div className='skills-tile'> <img className="skill-icon" src={FastAPIIcon} alt="FastAPI Icon"/><div className="skill-name">FastAPI</div></div>
+    <div className='skills-tile'> <img className="skill-icon" src={JavaScriptIcon} alt="JavaScript Icon"/><div className="skill-name">JavaScript</div></div>
+    <div className='skills-tile'> <img className="skill-icon" src={PythonIcon} alt="Python Icon"/><div className="skill-name">Python</div></div>
+    <div className='skills-tile'> <img className="skill-icon" src={AWSIcon} alt="AWS Icon"/><div className="skill-name">AWS S3</div></div>
+    <div className='skills-tile'> <img className="skill-icon" src={DjangoIcon} alt="Django Icon"/><div className="skill-name">Django</div></div>
+    <div className='skills-tile'> <img className="skill-icon" src={PostgreSQLIcon} alt="PostgreSQL Icon"/><div className="skill-name">PostgreSQL</div></div>
+    <div className='skills-tile'> <img className="skill-icon" src={HTML5Icon} alt="HTML5 Icon"/><div className="skill-name">HTML5</div></div>
+    <div className='skills-tile'> <img className="skill-icon" src={CSSIcon} alt="CSS Icon"/><div className="skill-name">CSS</div></div>
+    <div className='skills-tile'> <img className="skill-icon" src={MaterialUIIcon} alt="Material UI Icon"/><div className="skill-name">Material UI</div></div>
+  </div>
+  )
 }
 
 function App() {
+  const[openResume, setOpenResume] = useState(false);
+
+  const handleResumeOpen = () => {
+    if(openResume){
+      setOpenResume(false);
+    }else{
+      setOpenResume(true);
+    }
+
+  }
   return (
     <>
     <Nav/>
@@ -470,6 +598,17 @@ function App() {
     <CodeBox/>
     <Projects/>
     <Skills/>
+    <div className='resume-button' onClick={handleResumeOpen}> Resume {openResume ? (<CollapseIcon/>):(<ExpandIcon/>)}
+    </div>
+    {openResume &&
+      <div className='resume-wrapper'>
+        <Resume/>
+      </div>
+    }
+    {/* <div className='resume-wrapper'>
+      <Resume/>
+    </div> */}
+    <div id='contact'className='contact-me'>s</div>
     </>
   );
 }

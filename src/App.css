@@ -306,7 +306,7 @@ path{
 
 
 .projects-container{
-  height: 95vh;
+  height: 105vh;
   background-color: #2A2C31;
   width: 100%;
   display: flex;
@@ -337,13 +337,13 @@ path{
   width: 580px;
   border-radius: 13px;
   border: 1px solid #000;
-  background: #484848;
-  height: 307px;
+  background: #595b65;
+  height: 310px;
 }
 
 .project-display-one{
   width: 580px;
-  height: 307px;
+  height: 310px;
   border-radius: 13px;
   border:1px solid #36393f;
   /* background: url(./images/tf_home.png), lightgray 50% / cover no-repeat; */
@@ -359,7 +359,7 @@ path{
 
 .project-display-two{
   width: 580px;
-  height: 307px;
+  height: 310px;
   border-radius: 13px;
   border: 1px solid #B4B4B4;
   background: rgba(237, 237, 237, 0.20);
@@ -383,18 +383,20 @@ path{
   display: flex;
   margin: 10px 10px 0 0;
   flex-direction: row;
+  font-family: 'Dank Mono Regular';
   color: #FFF;
 }
 
 .project-title{
   color: #AA83FF;
-  font-family: Inter;
+  font-family: 'Dank Mono Regular';
   font-size: 24px;
   font-style: italic;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 10px;
 }
+
 
 .project-title:hover{
   color: #ccb4ff;
@@ -410,7 +412,7 @@ path{
 
 .project-description{
   color: #FFF;
-  font-family: Inter;
+  font-family: 'Dank Mono Regular';
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -445,17 +447,71 @@ path{
 }
 
 
-.skills-container{
-  height: 70vh;
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
   background-color: #181818;
+  padding: 50px;
+}
+
+.skills-tile {
+  width: calc(25% - 100px);
+  margin: 25px;
+  border-radius: 13px;
+  border: 1px solid #000;
+  background: #595b65;
+  height: 134px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.skill-icon {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+
+.skill-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.skills-tile:hover .skill-name {
+  transform: translateY(0);
 }
 
 .projects-title{
   color: #FFF;
+  font-family: 'Dank Mono Regular';
   margin-left: 5%;
   margin-top: 5%;
+  cursor: pointer;
 }
+
+.skills-title{
+  color: #FFF;
+  font-family: 'Dank Mono Regular';
+  margin-top: 5%;
+  cursor: pointer;
+}
+
 
 
 *::-webkit-scrollbar {
@@ -537,6 +593,7 @@ path{
 
 .scroller{
   color: #FFF;
+  cursor:pointer;
 }
 .scroll-downs {
   position: fixed;
@@ -560,6 +617,7 @@ path{
 
 .search-bar{
   display: flex;
+  padding-bottom: 3px;
   /* border:1px solid #36393f; */
 }
 
@@ -631,4 +689,77 @@ path{
 
 .w-full {
   width: 100%;
+}
+
+.resume-wrapper {
+  flex-grow: 1; /* Take up remaining space */
+  height: 120vh;
+  overflow: hidden; /* Allow scrolling within this div */
+}
+
+.resume-section{
+  height: 110vh;
+  overflow: hidden;
+}
+
+.resume-pdf{
+  height: 110vh;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.resume {
+  overflow: hidden !important;
+}
+
+.resume-button{
+  text-decoration: none;
+  color: #FFF;
+  background: #36393f;
+  padding: 8px 15px 8px 15px;
+  border-radius: 4px;
+  margin: 0px 0px 20px 20px;
+  max-width: 81px;
+  cursor: pointer;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-20px); }
+  100% { transform: translate(-50%, -50%) translateY(0); }
+}
+
+.resume-button:hover, .resume-button:hover .expand-icon path {
+  stroke: #AA83FF;
+  color: #AA83FF;
+  background: #464a52;
+}
+
+.expand-icon path:hover{
+  stroke: #AA83FF;
+}
+
+.download-button{
+  text-decoration: none;
+  color: #FFF;
+  background: #36393f;
+  padding: 8px 15px 8px 15px;
+  border-radius: 4px;
+  margin: 0px 0px 20px 20px;
+  cursor: pointer;
+}
+
+.download-button:hover, .dl-icon path:hover {
+  stroke: #AA83FF;
+  color: #AA83FF;
+  background: #464a52;
+}
+
+.dl-icon:hover path {
+  padding-top: 5px;
+  stroke: #AA83FF;
 }
