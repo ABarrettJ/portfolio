@@ -338,12 +338,12 @@ path{
   border-radius: 13px;
   border: 1px solid #000;
   background: #484848;
-  height: 265px;
+  height: 307px;
 }
 
 .project-display-one{
   width: 580px;
-  height: 265px;
+  height: 307px;
   border-radius: 13px;
   border:1px solid #36393f;
   /* background: url(./images/tf_home.png), lightgray 50% / cover no-repeat; */
@@ -359,7 +359,7 @@ path{
 
 .project-display-two{
   width: 580px;
-  height: 265px;
+  height: 307px;
   border-radius: 13px;
   border: 1px solid #B4B4B4;
   background: rgba(237, 237, 237, 0.20);
@@ -421,6 +421,7 @@ path{
 .skills{
   display: flex;
   width: 100%;
+  margin-top: 10px;
 }
 
 .chip{
