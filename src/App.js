@@ -75,13 +75,14 @@ const GitLab = (props) => (
 
 function GL2(){
   return(
-<a href="/" title="Homepage" data-track-action="click_link" data-track-label="gitlab_logo_link" data-track-property="nav_core_menu" class="brand-logo"><span data-testid="brand-header-default-logo"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 24" height="24" width="25" class="tanuki-logo">
+  <span data-testid="brand-header-default-logo"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 24" height="24" width="25" class="tanuki-logo">
   <path fill="#E24329" d="m24.507 9.5-.034-.09L21.082.562a.896.896 0 0 0-1.694.091l-2.29 7.01H7.825L5.535.653a.898.898 0 0 0-1.694-.09L.451 9.411.416 9.5a6.297 6.297 0 0 0 2.09 7.278l.012.01.03.022 5.16 3.867 2.56 1.935 1.554 1.176a1.051 1.051 0 0 0 1.268 0l1.555-1.176 2.56-1.935 5.197-3.89.014-.01A6.297 6.297 0 0 0 24.507 9.5Z" class="tanuki-shape tanuki"></path>
   <path fill="#FC6D26" d="m24.507 9.5-.034-.09a11.44 11.44 0 0 0-4.56 2.051l-7.447 5.632 4.742 3.584 5.197-3.89.014-.01A6.297 6.297 0 0 0 24.507 9.5Z" class="tanuki-shape right-cheek"></path>
   <path fill="#FCA326" d="m7.707 20.677 2.56 1.935 1.555 1.176a1.051 1.051 0 0 0 1.268 0l1.555-1.176 2.56-1.935-4.743-3.584-4.755 3.584Z" class="tanuki-shape chin"></path>
   <path fill="#FC6D26" d="M5.01 11.461a11.43 11.43 0 0 0-4.56-2.05L.416 9.5a6.297 6.297 0 0 0 2.09 7.278l.012.01.03.022 5.16 3.867 4.745-3.584-7.444-5.632Z" class="tanuki-shape left-cheek"></path>
 </svg>
-</span></a>
+</span>
+
   );
 }
 const Box = () => {
@@ -126,9 +127,10 @@ function Nav(){
     <div className='social-container'>
       <div className='resume'><a className='link-hover'>Resume</a></div>
       <div className='contact'><a className='link-hover'>Contact</a></div>
-      <LinkedIn/>
-
-      <a href='https://gitlab.com/barrettAJ'>
+      <a href='https://www.linkedin.com/in/abarrettj/' title='My LinkedIn'>
+        <LinkedIn/>
+      </a>
+      <a href='https://gitlab.com/barrettAJ' title='My Repository'>
         <GL2/>
       </a>
     </div>
@@ -144,7 +146,7 @@ const CodeBox = () => {
   const containerHeight = 256;
   const numLines = Math.floor(containerHeight / lineHeight);
 
-  const text = "Hey, I’m Austin! I’m a full stack developer located in Charlotte NC...";
+  const text = "Hey, I’m Austin! I’m a full stack developer located in Charlotte, NC...";
 
   useEffect(() => {
     if(index < text.length) {
@@ -153,7 +155,6 @@ const CodeBox = () => {
         setIndex(prevIndex => prevIndex + 1);
       }, 50);
 
-      // Clean up the timeout on unmount
       return () => clearTimeout(timeoutId);
     }
   }, [index, text]);
@@ -179,10 +180,6 @@ const CodeBox = () => {
     <>
     <div className="ide">
       <div className="hello-box">
-        {/* <div className="filestructure">
-          ghi  >  src  > candidates  >  austin_barrett.jsx
-        </div> */}
-        {/* <Dots/> */}
         <Box/>
         <div className="editor">
           <div className="line-numbers">
@@ -206,9 +203,13 @@ const CodeBox = () => {
                 if(word === 'located'){
                   return <span key={idx} className='dank-mono'> {word} </span>
                 }
+                if(word === 'NC...'){
+                  return <span key={idx} className='dank-mono'> {word}</span>
+                }
                 return <span key={idx} className='dank-mono'>{word} </span>
               })
             }
+            <span className="blinking-cursor">|</span>
           </div>
         </div>
       </div>
@@ -251,6 +252,7 @@ function Projects(){
               </div>
             </div>
             <div className='proj-repo'>
+              Live
               <div className="live">
                 <a href='https://tastefulapp.gitlab.io/tasteful/'>
                 <div className="pulse-container">
@@ -259,8 +261,8 @@ function Projects(){
                 </div>
                 </a>
               </div>
-              <a href='https://gitlab.com/tastefulapp/tasteful'>
-                <GitLab/>
+              <a href='https://gitlab.com/tastefulapp/tasteful' title='Tasteful Repository'>
+                <GL2/>
               </a>
             </div>
           </div>
@@ -314,9 +316,9 @@ function Projects(){
                 </svg>
               </div>
             </div>
-            <div className='proj-repo'>
+            <div className='proj-repo' title='Astro Repository'>
               <a href='https://gitlab.com/barrettAJ/astro'>
-                <GitLab/>
+                <GL2/>
               </a>
             </div>
           </div>
