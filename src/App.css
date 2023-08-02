@@ -329,7 +329,7 @@ path{
 
 .title-row{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 90%;
   justify-content: space-between;
   color: #FFF;
@@ -516,6 +516,13 @@ path{
   cursor: pointer;
 }
 
+.together{
+  color: #cecece;
+  font-family: 'Dank Mono Regular';
+  font-weight: 400;
+  font-style: italic;
+  padding-top:10px;
+}
 
 
 *::-webkit-scrollbar {
