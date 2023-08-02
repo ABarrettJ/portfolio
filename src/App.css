@@ -830,115 +830,6 @@ path{
   overflow: hidden;
 }
 
-.form-input-group {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.text-input{
-  min-height: 200px;
-  min-width: 25vw;
-  resize: none;
-  padding: 0.375rem 0.75rem;
-}
-/*
-
-
-.form-input, .form-textarea {
-  font-family: 'Dank Mono Regular';
-  width: 48%;
-  min-width: 300px;
-  height: auto;
-  border-radius: 13px;
-  border: 1px solid #38325B;
-  background: #1B1924;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  color: #FFF;
-  margin-top: 15px;
-}
-
-.form-textarea {
-  height: 100px;
-  width: 100%;
-  resize: none;
-} */
-
-.form-control{
-  margin: 0 5px 10px 0px;
-  display: block;
-  width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: white;
-  background-clip: padding-box;
-  appearance: none;
-  border-radius: var(--cui-border-radius);
-  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.form-input{
-  border-radius: 5px;
-  background: #1B1924;
-  border: 1px solid #38325B;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border: none;
-  height: 45px;
-  width:25vw;
-  margin-bottom: 16px;
-  color: #FFF;
-  font-family: 'Dank Mono Regular';
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  outline: none;
-}
-.form-input:focus {
-  outline-color: #38325B;
-}
-
-
-.form-button {
-  width: 26.3vw;
-  min-width: 300px;
-  height: auto;
-  border-radius: 13px;
-  border: none;
-  background: #1B1924;
-  padding: 1rem 0.75rem;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  color: #FFF;
-  font-family: 'Dank Mono Regular';
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  text-align: center;
-  align-items: center;
-  min-width: 25vw;
-  cursor: pointer;
-}
-
-.form-button:hover{
-  text-decoration: underline;
-  color: #AA83FF;
-}
-.custom-dialog .custom-paper {
-  background-color: transparent;
-  box-shadow: none;
-  overflow: hidden;
-}
-
-.custom-dialog .custom-backdrop {
-  background-color: transparent;
-}
-
 .customAlert {
   border: 1px solid #38325B !important;
   background: #1B1924 !important;
@@ -949,4 +840,59 @@ path{
 
 .customAlert svg {
   fill: #AA83FF;
+}
+
+.footer-divider{
+  background: #292929;
+  width: 100%;
+  height: 2px;
+}
+
+.footer-container{
+  margin-top: 100px;
+  height: 250px;
+  background: #181818;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-text{
+  text-align: left;
+}
+
+.footer-bold{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.footer-thin{
+  color: #AA83FF;
+}
+
+.footer-email{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  display: flex;
+  padding-top: 0.4rem;
+}
+
+.email-link {
+  color: #FFF;
+}
+
+.socials{
+  display: flex;
 }
