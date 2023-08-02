@@ -71,6 +71,9 @@ body{
   font-weight: 700;
   line-height: normal;
 }
+
+
+
 .link-hover{
   color: #FFF;
   text-decoration: none;
@@ -782,7 +785,7 @@ path{
   background: #181818;
 }
 
-.contact-form {
+/* .contact-form {
   font-family: 'Dank Mono Regular';
   width: 40%;
   min-width: 300px;
@@ -794,11 +797,46 @@ path{
   display: flex;
   flex-direction: column;
   color: #FFF;
+} */
+
+.contact-container{
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #2a2c31;
+  backdrop-filter: blur(10px);
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  height: 450px;
 }
+
+.card-body{
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
 .form-input-group {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
+
+.text-input{
+  min-height: 200px;
+  min-width: 25vw;
+  resize: none;
+  padding: 0.375rem 0.75rem;
+}
+/*
+
 
 .form-input, .form-textarea {
   font-family: 'Dank Mono Regular';
@@ -820,20 +858,76 @@ path{
   height: 100px;
   width: 100%;
   resize: none;
+} */
+
+.form-control{
+  margin: 0 5px 10px 0px;
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: white;
+  background-clip: padding-box;
+  appearance: none;
+  border-radius: var(--cui-border-radius);
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.form-button {
+.form-input{
+  border-radius: 5px;
+  background: #1B1924;
+  border: 1px solid #38325B;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  height: 45px;
+  width:25vw;
+  margin-bottom: 16px;
+  color: #FFF;
   font-family: 'Dank Mono Regular';
-  width: 100%;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  outline: none;
+}
+.form-input:focus {
+  outline-color: #38325B;
+}
+
+
+.form-button {
+  width: 26.3vw;
   min-width: 300px;
   height: auto;
   border-radius: 13px;
-  border: 1px solid #38325B;
+  border: none;
   background: #1B1924;
-  padding: 20px;
+  padding: 1rem 0.75rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   color: #FFF;
-  margin-top: 15px;
+  font-family: 'Dank Mono Regular';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+  min-width: 25vw;
+  cursor: pointer;
+}
+
+.form-button:hover{
+  text-decoration: underline;
+  color: #AA83FF;
+}
+.custom-dialog .custom-paper {
+  background-color: transparent;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.custom-dialog .custom-backdrop {
+  background-color: transparent;
 }

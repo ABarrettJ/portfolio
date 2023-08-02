@@ -2,7 +2,9 @@ import React, {useEffect, useState} from 'react';
 import tasteful from './images/tf_home.png'
 import astro from './images/astro_home.png'
 import jsx from './images/react.svg'
+import { Dialog } from '@mui/material';
 import './App.css';
+// import './Card.scss'
 import './AppMobile.css'
 import './tanuki.css'
 
@@ -35,56 +37,7 @@ const LinkedIn = (props) => (
     />
   </svg>
 );
-const GitLab = (props) => (
-  <svg
-    className="icon"
-    xmlns="http://www.w3.org/2000/svg"
-    id="Layer_2"
-    width={27}
-    height={27}
-    fill="#FFF"
-    stroke="#FFF"
-    strokeWidth={1.92}
-    data-name="Layer 2"
-    viewBox="0 0 48 48"
-    {...props}
-  >
-    <g id="SVGRepo_iconCarrier">
-      <defs>
-        <style>
-          {
-            ".cls-1{fill:none;stroke:#FFF;stroke-linecap:round;stroke-linejoin:round}"
-          }
-        </style>
-      </defs>
-      <path id="path50" d="M24 42h0l7.18-22.1H16.82L24 42Z" className="cls-1" />
-      <path
-        id="path66"
-        d="M6.76 19.86h0l-2.19 6.71a1.5 1.5 0 0 0 .54 1.67L24 42 6.76 19.86Z"
-        className="cls-1"
-      />
-      <path
-        id="path74"
-        d="M6.76 19.86h10.06L12.49 6.55a.74.74 0 0 0-1.41 0L6.76 19.86Z"
-        className="cls-1"
-      />
-      <path
-        id="path82"
-        d="M41.25 19.86h0l2.18 6.71a1.5 1.5 0 0 1-.54 1.67L24 42l17.25-22.1Z"
-        className="cls-1"
-      />
-      <path
-        id="path86"
-        d="M41.25 19.86H31.18l4.33-13.31a.74.74 0 0 1 1.41 0l4.33 13.31Z"
-        className="cls-1"
-      />
-      <path
-        d="m24 41.96 7.18-22.1h10.07L24 41.96zM24 41.96 6.76 19.86h10.06L24 41.96z"
-        className="cls-1"
-      />
-    </g>
-  </svg>
-);
+
 const Download = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -237,11 +190,7 @@ const Dots = (props) => (
   </svg>
 )
 
-function Nav(){
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    element.scrollIntoView({behavior: "smooth"});
-  }
+function Nav({handleOpenContact}){
   return (
     <>
     <div className='nav'>
@@ -251,7 +200,7 @@ function Nav(){
     </div>
     <div className='social-container'>
       <div className='resume'><a className='link-hover' href='https://drive.google.com/file/d/1jjqUpejs8H7VZvrM_3v46-31ExMxcEpu/view'>Resume</a></div>
-      <div className='contact'><a onClick={scrollToContact} className='link-hover'>Contact</a></div>
+      <div className='contact'><a onClick={handleOpenContact} className='link-hover'>Contact</a></div>
       <a href='https://www.linkedin.com/in/abarrettj/' title='My LinkedIn'>
         <LinkedIn/>
       </a>
@@ -581,12 +530,17 @@ function Skills(){
   )
 }
 
+
+
 function ContactMe() {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
     message: ''
   });
+
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (event) => {
     setFormState({
@@ -595,46 +549,185 @@ function ContactMe() {
     });
   };
 
+  const validateEmail = (email) => {
+    const re = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+    return re.test(email);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formState);
+
+    if (!formState.name || !formState.email || !formState.message) {
+      setErrorMessage("All fields must be filled out.");
+    } else if (!validateEmail(formState.email)) {
+      setErrorMessage("Invalid email format.");
+    } else {
+      setIsSubmitting(true);
+      setErrorMessage(null);
+
+      const formspreeEndpoint = process.env.REACT_APP_FORMSPREE_ENDPOINT;
+
+      fetch(formspreeEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.ok) {
+          setFormState({
+            name: '',
+            email: '',
+            message: ''
+          });
+          alert('Message sent!');
+        } else {
+          setErrorMessage("Error sending message.");
+        }
+      })
+      .catch((error) => {
+        setErrorMessage("An error occurred.");
+        console.error('Error:', error);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
+    }
   };
 
   return (
     <>
-    <h1 className='projects-title'>Contact Me</h1>
     <div className='contact-container'>
+    <div className="card-body">
       <form className='contact-form' onSubmit={handleSubmit}>
         <div className='form-input-group'>
           <input
-            className='form-input'
+            className='form-input form-control'
             type='text'
             name='name'
-            placeholder='Your Name'
+            placeholder='Name'
             value={formState.name}
             onChange={handleInputChange}
+            disabled={isSubmitting}
           />
           <input
-            className='form-input'
+            className='form-input form-control'
             type='email'
             name='email'
-            placeholder='Your Email'
+            placeholder='Email'
             value={formState.email}
             onChange={handleInputChange}
+            disabled={isSubmitting}
           />
         </div>
         <textarea
-          className='form-textarea'
+          className='form-input text-input'
           name='message'
-          placeholder='Your Message'
+          placeholder='Message'
           value={formState.message}
           onChange={handleInputChange}
+          disabled={isSubmitting}
         />
-        <button className='form-button' type='submit'>Submit</button>
+        <button className='form-button' type='submit' disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : "Submit"}
+        </button>
       </form>
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      </div>
     </div>
     </>
   );
+
+//   return (
+// <div className="card">
+//     <div className="card-back">
+//         <div className="line-numbers">
+//             <div>1</div>
+//             <div>2</div>
+//             <div>3</div>
+//             <div>4</div>
+//             <div>5</div>
+//             <div>6</div>
+//             <div>7</div>
+//             <div>8</div>
+//             <div>9</div>
+//         </div>
+//         <code>
+//             <span className="variable">const</span>
+//             <span className="function"> aboutMe</span>
+//             <span className="operator">=</span>
+//             <span>{'{'}</span>
+//             <div className="indent">
+//                 <span className="property">name</span>
+//                 <span className="operator">:</span>
+//                 <span className="string">'Austin Barrett'</span>
+//                 <span>,</span>
+//             </div>
+//             <div className="indent">
+//                 <span className="property">title</span>
+//                 <span className="operator">:</span>
+//                 <span className="string">'Full Stack Developer'</span>
+//                 <span>,</span>
+//             </div>
+//             <div className="indent">
+//                 <span className="property">contact</span>
+//                 <span className="operator">:</span>
+//                 <span>{'{'}</span>
+//                 <div className="indent">
+//                     <span className="property">email</span>
+//                     <span className="operator">:</span>
+//                     <span className="string">'austinjbarrett98@gmail.com'</span>
+//                     <span>,</span>
+//                 </div>
+//                 <div className="indent">
+//                     <span className="property">linkedIn</span>
+//                     <span className="operator">:</span>
+//                     <span className="string">'linkedin.com/in/abarrettj'</span>
+//                 </div>
+//                 <span>{'}'}</span>
+//             </div>
+//             <span>{'}'}</span>
+//         </code>
+//     </div>
+//     <div className="card-front">
+//         <div className="line-numbers">
+//             <div>1</div>
+//             <div>2</div>
+//             <div>3</div>
+//             <div>4</div>
+//             <div>5</div>
+//             <div>6</div>
+//             <div>7</div>
+//             <div>8</div>
+//             <div>9</div>
+//         </div>
+//         <code>
+//             <span className="variable">this</span>
+//             <span>.</span>
+//             <span className="method">addEventListener</span>
+//             <span>(</span>
+//             <span className="string">'mouseover'</span>
+//             <span>,</span>
+//             <span className="function">()</span>
+//             <span>=></span>
+//             <span>{'{'}</span>
+//             <div className="indent">
+//                 <span className="variable">this</span>
+//                 <span>.</span>
+//                 <span className="property">flipCard</span>
+//                 <span>=</span>
+//                 <span className="boolean">true</span>
+//                 <span>;</span>
+//             </div>
+//             <span>{'}'}</span>
+//         </code>
+//     </div>
+// </div>
+  // );
+
+
 }
 
 
@@ -679,7 +772,16 @@ function ResumeElement() {
 }
 
 function App() {
+  const[openContact, setOpenContact] = useState(false);
   const[openResume, setOpenResume] = useState(false);
+
+  const handleOpenContact = () => {
+    setOpenContact(true);
+  }
+
+  const handleCloseContact = () => {
+    setOpenContact(false);
+  }
 
   const handleResumeOpen = () => {
     if(openResume){
@@ -687,16 +789,25 @@ function App() {
     }else{
       setOpenResume(true);
     }
-
   }
+
   return (
     <>
-    <Nav/>
+    <Nav handleOpenContact={handleOpenContact}/>
     <div className='nav-spacer'></div>
     <CodeBox/>
     <Projects/>
     <Skills/>
     <ResumeElement/>
+    <Dialog
+      open={openContact}
+      onClose={handleCloseContact}
+      className='dialog custom-dialog'
+      PaperProps={{ className: 'custom-paper' }}
+      BackdropProps={{ className: 'custom-backdrop' }}
+    >
+      <ContactMe/>
+    </Dialog>
 
     {/* <ContactMe/> */}
     {/* <div className='resume-wrapper'>
