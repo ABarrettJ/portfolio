@@ -3,6 +3,7 @@ import tasteful from './images/tf_home.png'
 import astro from './images/astro_home.png'
 import jsx from './images/react.svg'
 import { Dialog } from '@mui/material';
+import Alert from '@mui/material/Alert';
 import './App.css';
 // import './Card.scss'
 import './AppMobile.css'
@@ -779,6 +780,7 @@ function ResumeElement() {
 function App() {
   const[openContact, setOpenContact] = useState(false);
   const[openResume, setOpenResume] = useState(false);
+  const [alertOpen, setAlertOpen] = useState(true);
 
   const handleOpenContact = () => {
     setOpenContact(true);
@@ -798,6 +800,18 @@ function App() {
 
   return (
     <>
+    {alertOpen &&
+      <Alert
+        className="customAlert"
+        severity="info"
+        open={alertOpen}
+        onClose={() => {
+          setAlertOpen(false)
+        }}
+      >
+        Thank you for visiting my portfolio! Please note that it's currently under active development and may not yet be fully optimized for all devices and resolutions.
+      </Alert>
+    }
     <Nav handleOpenContact={handleOpenContact}/>
     <div className='nav-spacer'></div>
     <CodeBox/>

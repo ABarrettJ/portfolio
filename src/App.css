@@ -938,3 +938,15 @@ path{
 .custom-dialog .custom-backdrop {
   background-color: transparent;
 }
+
+.customAlert {
+  border: 1px solid #38325B !important;
+  background: #1B1924 !important;
+  color: #FFF !important;
+  font-family: 'Dank Mono Regular' !important;
+  margin: 10px 20px 0px 20px;
+}
+
+.customAlert svg {
+  fill: #AA83FF;
+}
