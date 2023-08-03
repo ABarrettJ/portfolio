@@ -203,7 +203,6 @@ export default function Projects(){
         </div>
         <div className='title-row'>
         <h1 className='skills-title'>Skills</h1>
-        <div className='together'>Let's add more together!</div>
         </div>
       </div>
       </>
