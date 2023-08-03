@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ac040e2.css",
-    "main.js": "/static/js/main.8258e076.js",
+    "main.css": "/static/css/main.070dd386.css",
+    "main.js": "/static/js/main.2c880b59.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/astro_home.png": "/static/media/astro_home.a295ec22355a2225d5dd.png",
     "static/media/tf_home.png": "/static/media/tf_home.47e28915dabe0c47a3f5.png",
@@ -19,12 +19,12 @@
     "static/media/css3.svg": "/static/media/css3.1323e04024709c8a25e60cd9db22db48.svg",
     "static/media/html5.svg": "/static/media/html5.8e6289ed1eb0b9f348a463db8fa3e38c.svg",
     "static/media/fastapi.svg": "/static/media/fastapi.0d5b8486286b67dd2b7c9d51b5deb794.svg",
-    "main.6ac040e2.css.map": "/static/css/main.6ac040e2.css.map",
-    "main.8258e076.js.map": "/static/js/main.8258e076.js.map",
+    "main.070dd386.css.map": "/static/css/main.070dd386.css.map",
+    "main.2c880b59.js.map": "/static/js/main.2c880b59.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ac040e2.css",
-    "static/js/main.8258e076.js"
+    "static/css/main.070dd386.css",
+    "static/js/main.2c880b59.js"
   ]
 }
