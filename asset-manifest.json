@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c9280c51.css",
+    "main.css": "/static/css/main.d90819ac.css",
     "main.js": "/static/js/main.e23200b5.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/astro_home.png": "/static/media/astro_home.a295ec22355a2225d5dd.png",
@@ -19,12 +19,12 @@
     "static/media/css3.svg": "/static/media/css3.1323e04024709c8a25e60cd9db22db48.svg",
     "static/media/html5.svg": "/static/media/html5.8e6289ed1eb0b9f348a463db8fa3e38c.svg",
     "static/media/fastapi.svg": "/static/media/fastapi.0d5b8486286b67dd2b7c9d51b5deb794.svg",
-    "main.c9280c51.css.map": "/static/css/main.c9280c51.css.map",
+    "main.d90819ac.css.map": "/static/css/main.d90819ac.css.map",
     "main.e23200b5.js.map": "/static/js/main.e23200b5.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9280c51.css",
+    "static/css/main.d90819ac.css",
     "static/js/main.e23200b5.js"
   ]
 }
