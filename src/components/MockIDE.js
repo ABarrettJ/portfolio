@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import jsx from '../images/react.svg';
 
 const Box = () => {
@@ -17,49 +17,57 @@ const Box = () => {
 
 export default function CodeBox () {
 
-    const [index, setIndex] = useState(0);
-    const [displayText, setDisplayText] = useState('');
-    const lineHeight = 60;
-    const containerHeight = 256;
-    const numLines = Math.floor(containerHeight / lineHeight);
+  const [index, setIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const lineHeight = 35;
+  const containerHeight = 256;
+  const textContentRef = useRef(null);
+  const [numLines, setNumLines] = useState(Math.floor(containerHeight / lineHeight));
 
-    const scrollToProjects = () => {
-      const element = document.getElementById('projects-scroll');
-      element.scrollIntoView({behavior: "smooth"});
+  const scrollToProjects = () => {
+    const element = document.getElementById('projects-scroll');
+    element.scrollIntoView({behavior: "smooth"});
+  }
+
+  const text = "Hey, I’m Austin! I’m a full stack developer located in Charlotte, NC...";
+
+  useEffect(() => {
+    if(index < text.length) {
+      const timeoutId = setTimeout(() => {
+        setDisplayText(prevText => prevText + text.charAt(index));
+        setIndex(prevIndex => prevIndex + 1);
+      }, 50);
+
+      return () => clearTimeout(timeoutId);
     }
+  }, [index, text]);
 
-    const text = "Hey, I’m Austin! I’m a full stack developer located in Charlotte, NC...";
+  const [showScroll, setShowScroll] = useState(true);
 
-    useEffect(() => {
-      if(index < text.length) {
-        const timeoutId = setTimeout(() => {
-          setDisplayText(prevText => prevText + text.charAt(index));
-          setIndex(prevIndex => prevIndex + 1);
-        }, 50);
-
-        return () => clearTimeout(timeoutId);
-      }
-    }, [index, text]);
-
-    const [showScroll, setShowScroll] = useState(true);
-
-    useEffect(() => {
-      window.addEventListener('scroll', checkScrollTop);
-      return function cleanup() {
-        window.removeEventListener('scroll', checkScrollTop);
-      };
-    });
-
-    const checkScrollTop = () => {
-      if (!showScroll && window.scrollY <= 180){
-        setShowScroll(true);
-      } else if (showScroll && window.scrollY >180){
-        setShowScroll(false);
-      }
+  useEffect(() => {
+    window.addEventListener('scroll', checkScrollTop);
+    return function cleanup() {
+      window.removeEventListener('scroll', checkScrollTop);
     };
+  });
 
-    return (
-      <>
+  const checkScrollTop = () => {
+    if (!showScroll && window.scrollY <= 180){
+      setShowScroll(true);
+    } else if (showScroll && window.scrollY >180){
+      setShowScroll(false);
+    }
+  };
+
+  useEffect(() => {
+    if(textContentRef.current) {
+      const { height } = textContentRef.current.getBoundingClientRect();
+      setNumLines(Math.floor(height / lineHeight));
+    }
+  }, [lineHeight, displayText]);
+
+  return (
+    <>
       <div className="ide">
         <div className="hello-box">
           <Box/>
@@ -73,7 +81,7 @@ export default function CodeBox () {
                 ))
               }
             </div>
-            <div className="text-content">
+            <div className="text-content" ref={textContentRef}>
               {
                 displayText.split(' ').map((word, idx) => {
                   if(word === 'full' || word === 'stack') {
@@ -103,6 +111,6 @@ export default function CodeBox () {
             </div>
           </div>
         )}
-      </>
-    );
-  }
+    </>
+  );
+}

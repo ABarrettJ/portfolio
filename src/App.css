@@ -14,6 +14,10 @@ body{
   background: #181818;
 }
 
+.text-content{
+  line-height: 39px !important;
+}
+
 .nav{
   display: flex;
   justify-content: space-between;
