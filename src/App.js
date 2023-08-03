@@ -7,7 +7,11 @@ import ResumeElement from './components/Resume';
 import Footer from './components/Footer';
 import Alert from '@mui/material/Alert';
 import './App.css';
-import './AppMobile.css';
+import './mobile_css/mobile1200.css';
+import './mobile_css/mobile1024.css';
+import './mobile_css/mobile900.css';
+import './mobile_css/mobile600.css';
+import './mobile_css/mobile432.css';
 import './tanuki.css';
 
 function App() {
