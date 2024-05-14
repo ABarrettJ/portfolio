@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b41eeaaa.css",
-    "main.js": "/static/js/main.2c880b59.js",
+    "main.js": "/static/js/main.0c9f4804.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/astro_home.png": "/static/media/astro_home.a295ec22355a2225d5dd.png",
     "static/media/tf_home.png": "/static/media/tf_home.47e28915dabe0c47a3f5.png",
@@ -20,11 +20,11 @@
     "static/media/html5.svg": "/static/media/html5.8e6289ed1eb0b9f348a463db8fa3e38c.svg",
     "static/media/fastapi.svg": "/static/media/fastapi.0d5b8486286b67dd2b7c9d51b5deb794.svg",
     "main.b41eeaaa.css.map": "/static/css/main.b41eeaaa.css.map",
-    "main.2c880b59.js.map": "/static/js/main.2c880b59.js.map",
+    "main.0c9f4804.js.map": "/static/js/main.0c9f4804.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b41eeaaa.css",
-    "static/js/main.2c880b59.js"
+    "static/js/main.0c9f4804.js"
   ]
 }
