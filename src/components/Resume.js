@@ -18,7 +18,7 @@ const Resume = () => {
         <article className='resume-pdf'>
         <iframe
           title="Resume"
-          src="https://drive.google.com/file/d/1jjqUpejs8H7VZvrM_3v46-31ExMxcEpu/preview"
+          src="https://drive.google.com/file/d/1krDAeMbtWOKAa_1byrHQjH_YSXhF-uaO/preview"
           style={{border: "none", width: "100%", height: "110%", overflow: "hidden"}}
         >
         </iframe>
